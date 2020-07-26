@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'd_Kallisto';
+  src: url(../../fonts/d_Kallisto.otf);
+}
+
+$blue: rgb(52, 80, 235);
+
+$green: rgb(6, 194, 6);
+
+$red: rgb(255, 102, 0);
+
+$pink: rgb(166, 8, 172);
+
+$activeColor: white;
+
+
+body * {
+  font-family: d_Kallisto, Verdana, Geneva, Tahoma, sans-serif;
+}
+.main {
+  position: relative;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  .todo-list {
+    position: relative;
+    overflow: hidden;
+    width: 700px;
+    height: auto;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 0px 15px 20px 15px;
+  }
+  .top-of-list {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+}
+
+// filter buttons
+
+.btns:nth-child(1) {
+  color: $blue;
+  border-color: $blue;
+}
+
+.btns:nth-child(2) {
+  color: $green;
+  border-color: $green;
+}
+
+.btns:nth-child(3) {
+  color: $red;
+  border-color: $red;
+}
+
+.btns:nth-child(4) {
+  color: $pink;
+  border-color: $pink;
+}
+
+// variable color settings
+
+.todo-list.blue {
+  border-color: $blue;
+}
+
+.blue .active {
+  background-color: $blue;
+  color: $activeColor;
+}
+
+.todo-list.green {
+  border-color: $green;
+}
+
+.green .active {
+  background-color: $green;
+  color: $activeColor;
+}
+
+.todo-list.red {
+  border-color: $red;
+}
+
+.red .active {
+  background-color: $red;
+  color: $activeColor;
+}
+
+.todo-list.pink {
+  border-color: $pink;
+}
+
+.pink .active {
+  background-color: $pink;
+  color: $activeColor;
+}

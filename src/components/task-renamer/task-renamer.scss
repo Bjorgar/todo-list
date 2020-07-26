@@ -1,0 +1,51 @@
+.renamer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  .input-rename {
+    font-size: 1em;
+    font-family: d_Kallisto, Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+  }
+  .placeholder {
+    position: absolute;
+    color: rgb(200, 200, 200);
+  }
+  .hide-placeholder {
+    display: none;
+  }
+  .rename-btns {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 50px;
+    border-left: 1px solid black;
+    button {
+      flex-grow: 1;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    .submit-btn {
+      color: green;
+      border-bottom: 1px solid black;
+    }
+    .unactive-btn {
+      color: rgb(255, 0, 0);
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}
+
+
+

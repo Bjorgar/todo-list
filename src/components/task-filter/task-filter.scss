@@ -1,0 +1,23 @@
+.filter-div {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.btns {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  font-size: 1.25em;
+  outline: none;
+  margin-bottom: 0;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  &:first-child {
+    border-bottom-left-radius: 5px;
+  }
+  &:last-child {
+    border-right: none;
+  }
+}
