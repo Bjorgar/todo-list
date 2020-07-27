@@ -1,9 +1,3 @@
-const checkValue = (value) => {
-    
-  if (/^\s+$/.test(value) || value === '') {
-    return false;
-  } 
-    return true;
-}
+const checkValue = (value) => !!value.trim();
 
 export default checkValue;

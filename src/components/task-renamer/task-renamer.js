@@ -25,6 +25,21 @@ const TaskRenamer = ({ taskToRename, taskId, submitRenamedTask }) => {
     }
   }
 
+  const clickEvent = (e) => {
+    const form = document.querySelector(`.renamer`);
+    const target = e.target;
+    if (form === target || form.contains(target)) {
+      return
+    } else {
+      cancelRename(e);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', clickEvent);
+    return () => document.removeEventListener('click', clickEvent);
+  }, [ ]);
+
   const onValueChange = (e) => {
     const value = e.target.value;
     processValue(setAction, setValid, value);
