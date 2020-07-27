@@ -28,10 +28,10 @@ const TaskRenamer = ({ taskToRename, taskId, submitRenamedTask }) => {
   const clickEvent = (e) => {
     const form = document.querySelector(`.renamer`);
     const target = e.target;
-    if (form === target || form.contains(target)) {
-      return
-    } else {
+    if (form === !target || !form.contains(target)) {
       cancelRename(e);
+    } else {
+      return
     }
   }
 
